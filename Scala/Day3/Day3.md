@@ -14,7 +14,8 @@ CREATE TABLE Day3.Persons (
   Postal_code String
 )
 ```
-//Inserting into Persons table 
+## Inserting into Persons table 
+```sql
 INSERT INTO TABLE Day3.Persons
 VALUES (1, 'John', 'Franks', '1001 Mission St', 'San Francisco', '94016'),
 (2, 'Peter', 'Sonnens', '1002 Mission St', 'San Francisco', '94016'),
@@ -31,41 +32,42 @@ VALUES (1, 'John', 'Franks', '1001 Mission St', 'San Francisco', '94016'),
 (13, 'Emma', 'Brown', '4234 Hawk St', 'New York', '12641'),
 (14, 'Emily', 'Davis', '89 Hanes St', 'Poughkeepsie', '12313'),
 (15, 'Andrew', 'Wilson', '76 Bakers St', 'Poughkeepsie', '12315')
-
-//Creating Personal_info table
+```
+## Creating Personal_info table
+```sql
 CREATE TABLE IF NOT EXISTS Day3.Personal_info (
   ID INT,
   EMAIL VARCHAR(200)
 )
-
-//Inserting into Personal_info table
+```
+## Inserting into Personal_info table
+```sql
 INSERT INTO TABLE Day3.Personal_info
 VALUES(1, 'abc.hdsd@gmail.com'),
 (23, 'xyz_dhew@gmail.com'),
 (34, 'hello.hi@gmail.com')
-
-//Creating Personal_info table
-CREATE TABLE IF NOT EXISTS Day3.Personal_info (
-  ID INT,
-  EMAIL VARCHAR(200)
-)
-
-//Inner Joining two tables
+```
+## Inner Joining two tables
+```sql
 SELECT * FROM Day3.Persons AS P
 INNER JOIN Day3.Personal_info as I
 ON P.PERSONID = I.ID
-
-//Left Outer Joining two tables
+```
+## Left Outer Joining two tables
+```sql 
 SELECT * FROM Day3.Persons AS P
 LEFT OUTER JOIN Day3.Personal_info as I
 ON P.PERSONID = I.ID
-
-//Right Outer Joining two tables
+```
+## Right Outer Joining two tables
+```sql
 SELECT * FROM Day3.Persons AS P
 RIGHT OUTER JOIN Day3.Personal_info as I
 ON P.PERSONID = I.ID
-
-//Full Outer Joining two tables
+```
+## Full Outer Joining two tables
+```sql
 SELECT * FROM Day3.Persons AS P
 FULL OUTER JOIN Day3.Personal_info as I
 ON P.PERSONID = I.ID
+```
