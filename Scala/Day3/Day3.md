@@ -1,7 +1,10 @@
-//Creating Database 
+# Day3
+## Creating Database 
+``` sql
 CREATE DATABASE IF NOT EXISTS Day3
-
-//Creating Person table
+```
+## Creating Person table
+```sql
 CREATE TABLE Day3.Persons (
   PersonID int,
   LastName varchar(255),
@@ -10,7 +13,7 @@ CREATE TABLE Day3.Persons (
   City varchar(255),
   Postal_code String
 )
-
+```
 //Inserting into Persons table 
 INSERT INTO TABLE Day3.Persons
 VALUES (1, 'John', 'Franks', '1001 Mission St', 'San Francisco', '94016'),
