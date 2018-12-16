@@ -1,8 +1,10 @@
 # Day3
+
 ## Creating Database 
 ``` sql
 CREATE DATABASE IF NOT EXISTS Day3
 ```
+
 ## Creating Person table
 ```sql
 CREATE TABLE Day3.Persons (
@@ -14,6 +16,7 @@ CREATE TABLE Day3.Persons (
   Postal_code String
 )
 ```
+
 ## Inserting into Persons table 
 ```sql
 INSERT INTO TABLE Day3.Persons
@@ -33,6 +36,7 @@ VALUES (1, 'John', 'Franks', '1001 Mission St', 'San Francisco', '94016'),
 (14, 'Emily', 'Davis', '89 Hanes St', 'Poughkeepsie', '12313'),
 (15, 'Andrew', 'Wilson', '76 Bakers St', 'Poughkeepsie', '12315')
 ```
+
 ## Creating Personal_info table
 ```sql
 CREATE TABLE IF NOT EXISTS Day3.Personal_info (
@@ -40,6 +44,7 @@ CREATE TABLE IF NOT EXISTS Day3.Personal_info (
   EMAIL VARCHAR(200)
 )
 ```
+
 ## Inserting into Personal_info table
 ```sql
 INSERT INTO TABLE Day3.Personal_info
@@ -47,24 +52,28 @@ VALUES(1, 'abc.hdsd@gmail.com'),
 (23, 'xyz_dhew@gmail.com'),
 (34, 'hello.hi@gmail.com')
 ```
+
 ## Inner Joining two tables
 ```sql
 SELECT * FROM Day3.Persons AS P
 INNER JOIN Day3.Personal_info as I
 ON P.PERSONID = I.ID
 ```
+
 ## Left Outer Joining two tables
 ```sql 
 SELECT * FROM Day3.Persons AS P
 LEFT OUTER JOIN Day3.Personal_info as I
 ON P.PERSONID = I.ID
 ```
+
 ## Right Outer Joining two tables
 ```sql
 SELECT * FROM Day3.Persons AS P
 RIGHT OUTER JOIN Day3.Personal_info as I
 ON P.PERSONID = I.ID
 ```
+
 ## Full Outer Joining two tables
 ```sql
 SELECT * FROM Day3.Persons AS P
