@@ -1,14 +1,20 @@
-//Creating table for parquet data source
+## Creating table for parquet data source
+```sql
 CREATE TABLE IF NOT EXISTS Day3.flight_summary_parquet 
 USING parquet 
 LOCATION "/databricks-datasets/definitive-guide/data/flight-data/parquet/2010-summary.parquet"
+```
 
-//Creating table for JSON data source
+## Creating table for JSON data source
+```sql
 CREATE TABLE IF NOT EXISTS Day3.flight_summary_json (dest_country string, origin_country string,count int)
 USING JSON 
 LOCATION "/databricks-datasets/definitive-guide/data/flight-data/parquet/2010-summary.json"
+```
 
-//Creating table for CSV data source
+## Creating table for CSV data source
+```sql
 CREATE TABLE IF NOT EXISTS Day3.flight_summary_csv(Dest_Country_Name String, Origin_Country_Name String, Count int)
 USING CSV 
 LOCATION "/databricks-datasets/definitive-guide/data/flight-data/parquet/2010-summary.csv"
+```
